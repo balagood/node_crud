@@ -1,0 +1,153 @@
+{
+  "info": {
+    "_postman_id": "9a73f75f-c3f3-442d-b4df-6bcdf6c30226",
+    "name": "Node",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "3553114"
+  },
+  "item": [
+    {
+      "name": "getAllRecipes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://{{base_url}}/recipes/",
+          "protocol": "http",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "recipes",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createRecipes",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"chicken\",\r\n    \"description\":\"it is an not veg\",\r\n    \"ingerident\":\"for making an rice\",\r\n    \"price\":\"10\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://{{base_url}}/recipes",
+          "protocol": "http",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "recipes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getRecipeById",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://{{base_url}}/recipes/69787395d0cda05545e424cd",
+          "protocol": "http",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "recipes",
+            "69787395d0cda05545e424cd"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getUpdateRecipeById",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"chicken\",\r\n    \"description\":\"it is an non veg\",\r\n    \"ingerident\":\"for making an rice\",\r\n    \"price\":\"10\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://{{base_url}}/recipes/69787395d0cda05545e424cd",
+          "protocol": "http",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "recipes",
+            "69787395d0cda05545e424cd"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getRecipeById",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/recipes/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "recipes",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}
