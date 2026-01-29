@@ -1,14 +1,21 @@
 import express from 'express'
 import recipeRouter from './routes/recipe.routes.js'
 import mongoose from 'mongoose'
+import dotenv from "dotenv"
 
 //use an express
 const app = express()
 
-//connecting database
-mongoose.connect('mongodb://127.0.0.1:27017/node_crud')
+
+dotenv.config();
+const { DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD } = process.env;
+const uri = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}/${DB_DATABASE}?retryWrites=true&w=majority`;
+
+mongoose.connect(uri)
 .then(()=>console.log("Mondodb connected"))
 .catch((err)=>console.log(err))
+
+
 
 app.use(express.json())
 
